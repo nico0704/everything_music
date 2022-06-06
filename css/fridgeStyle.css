@@ -1,0 +1,547 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Rufina:wght@400;700&family=Sintony:wght@400;700&family=Bebas+Neue&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    color: #f1f1f1;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    /* The image used */
+    background-image: url("../bilder/FoodDark.jpg");
+    background-color: #202020; 
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+
+main{
+  margin-top: 40px;
+}
+
+.grid-container{
+  display: grid;
+  margin: 0 10%;
+}
+
+img{
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+/*Content Start*/
+.grid-container #header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "nav nav";
+  gap: 50px 30px;
+}
+
+#header{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.navigation{
+  grid-area: nav;
+}
+
+/*Navigation*/
+.navbar {
+	margin-top:70px;
+	margin-bottom:0px;
+	border-radius: 0px;
+	font-size: 38px;
+  line-height: 30px;
+  font-family: 'Bebas Neue', cursive; 
+}
+
+.navbar .nav > li > a{
+	padding-left:20px;
+	padding-right: 0px;
+	margin-left:25px;
+  color: #f1f1f1;
+  text-decoration: none;
+}
+
+ul.nav li{
+    float: left;
+    list-style: none;
+}
+
+.navbar ul.nav{
+    float:right;
+    margin-top: 0px;
+}
+
+.navbar .nav > .active > a, .navbar > .active > a:focus > .active > a:hover {
+    color: #f39200;
+	
+    background-color: transparent;
+}
+
+.navbar .nav > li > a:hover {
+    color: #f39200;
+	border-bottom:solid 2px #707070;
+}
+
+.yourProducts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "headline headline headline"
+    "product1Frame product2Frame product3Frame"
+    "product1Title product2Title product3Title"
+    "product1 product2 product3"
+    "product1MHD product2MHD product3MHD";
+    gap: 15px 30px;
+}
+
+.headline{ 
+  grid-area: headline;
+}
+
+.margin-bottom{
+  margin-bottom: 35px;;
+}
+
+.product1 {
+  grid-area: product1;
+}
+.product2 {
+  grid-area: product2;
+}
+.product3 {
+  grid-area: product3;
+}
+
+.product1MHD {
+  grid-area: product1MHD;
+}
+
+.product2MHD {
+  grid-area: product2MHD;
+}
+
+.product3MHD {
+  grid-area: product3MHD;
+}
+
+
+.product1MHD, .product2MHD, .product3MHD {
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: rgba(255, 0, 0, 0.726);
+  border: none;
+  border-radius: 50px;
+  width: 80%;
+  margin-left: 4%;
+  margin-bottom: 3%;
+}
+
+.product1MHD {
+  background-color: rgba(0, 255, 21, 0.726);
+}
+
+.product1Title, .product2Title, .product3Title {
+  text-align: center;
+  width: 100%;
+  padding: 12px;
+  border-radius: 35px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 0%;
+  resize: vertical;
+  text-align: center;
+  
+}
+
+.product1Frame {
+  grid-area: product1Frame;
+  border: 4px solid #ccc;
+}
+.product2Frame {
+  grid-area: product2Frame;
+  border: 4px solid #ccc;
+}
+.product3Frame {
+  grid-area: product3Frame;
+  border: 4px solid #ccc;
+}
+
+.product1Title {
+  grid-area: product1Title;
+}
+.product2Title {
+  grid-area: product2Title;
+}
+.product3Title {
+  grid-area: product3Title;
+}
+
+.createProductForm {
+  border-radius: 15px;
+  background-color: rgba(179, 179, 179, 0.25);
+  padding: 20px;
+}
+
+.editProductForm {
+  border-radius: 15px;
+  background-color: rgba(179, 179, 179, 0.25);
+  padding: 20px;
+}
+
+input[type=number], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 25px;
+  resize: vertical;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 25px;
+  resize: vertical;
+}
+
+input[type=date], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 25px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  width: 15%;
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-left: 42%;
+  resize: vertical;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #047c50;
+}
+
+input[type=number]:hover {
+  background-color: #c2c2c2;
+}
+
+input[type=date]:hover {
+  background-color: #c2c2c2;
+}
+
+ol li{
+  list-style-type: none;
+}
+
+.ingredientsSingleProduct, .energy, .carbohydrates, .sugar, .fat, .salt, .proteins, .quantity {
+  width: 400px;
+  padding: 12px;
+  border-top:4px solid #ccc;
+  border-bottom: 4px solid #ccc;
+  border-radius: 35px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 0%;
+  resize: vertical;
+  text-align: center;
+  background-color: rgba(179, 179, 179, 0.3);
+}
+
+.quantity {
+  margin-left: 0%;
+  width: 100%;
+}
+
+.ingredientsSingleProduct:hover, .energy:hover, .carbohydrates:hover, .sugar:hover, .fat:hover, .salt:hover, .proteins:hover, .quantity:hover {
+  border-color: #f39200;
+}
+
+.ingredientsSingleProductLabel:hover, .energyLabel:hover, .carbohydratesLabel:hover, .sugarLabel:hover, .fatLabel:hover, .saltLabel:hover, .proteinsLabel:hover {
+  background-color: rgba(179, 179, 179, 0.3);
+}
+
+
+
+.ingredientsSingleProduct {
+  width: 400px;
+  margin-left: 0%;
+  text-align: center;
+}
+
+.ingredientsSingleProductLabel, .energyLabel, .carbohydratesLabel, .sugarLabel, .fatLabel, .saltLabel, .proteinsLabel {
+  width: 40%;
+  padding: 12px;
+  border-top:4px solid #f39200;
+  border-bottom: 4px solid #f39200;
+  border-radius: 35px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 70%;
+  margin-right: 0%;
+  resize: vertical;
+  text-align: center;
+}
+
+
+.singleProduct {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "headline headline headline"
+    "productImg productLabels productInformation"
+    "quantity quantityButtons deleteProduct";
+    gap: 15px 30px;
+}
+
+.productImg {
+  grid-area: productImg;
+}
+
+.prodImg {
+  width: 60%;
+  border-radius: 20%;
+  margin-left: 30%;
+}
+
+.barcodeImg {
+  width: 60%;
+  border-radius: 20%;
+  margin-left: 30%;
+}
+
+.productInformation {
+  grid-area: productInformation;
+}
+
+.productLabels {
+  grid-area: productLabels;
+}
+
+.deleteProduct {
+  grid-area: deleteProduct;
+  margin-top: 30%;
+}
+
+.quantity {
+  grid-area: quantity;
+  margin-top: 30%;
+  margin-bottom: 30%;
+}
+
+.quantityButtons {
+  grid-area: quantityButtons;
+  margin-top: 29%;
+  margin-left: 0%;
+}
+
+
+.deleteButton {
+  padding: 15px 25px;
+  font-size: 15px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(255, 0, 0, 0.3);
+  border: none;
+  border-radius: 50px;
+  width: 60%;
+  margin-left: 30%;
+}
+
+
+.deleteButton:hover {background-color: rgb(255, 0, 0, 0.8)}
+
+.deleteButton:active {
+  background-color: rgb(255, 0, 0, 0.3);
+  transform: translateY(4px);
+}
+
+.addOne, .minusOne {
+  height: 60px;
+  line-height: 9px;  
+  width: 60px;  
+  font-size: 2em;
+  font-weight: bold;
+  border-color:transparent;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 13, 0.5);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.addOne:active, .minusOne:active {
+  transform: translateY(4px);
+}
+
+.addOne:hover, .minusOne:hover {
+  background-color: rgba(0, 255, 13, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Typografie*/
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3
+ {
+	font-family: 'Bebas Neue', cursive;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 3pt;
+}
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	margin-top: 0px;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin-top: 0px;
+    margin-bottom:0px;
+	font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+.h1 {
+	font-size: 72px;
+    line-height: 82px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 2px solid #3F3F3F;
+    border-bottom: 2px solid #3F3F3F;
+}
+
+h2,
+.h2 {
+    font-size: 46px;
+    line-height: 58px;
+    padding-top: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+h3,
+.h3 {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+h4,
+.h4 {
+	font-size: 18px;
+	line-height: 28px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/*scrollToTop-Button*/
+#scrollToTop {
+  cursor: pointer;
+  font-size: 30px;
+  line-height: 22px;
+  position: fixed;
+  text-align: center;
+  z-index: 9999;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
+  background: #343434;
+  color: #f1f1f1;
+  border-radius: 100%;
+  border: 2px solid #f1f1f1;
+  padding: 15px;
+  padding-bottom: 7px;
+  right: 50px;
+  bottom: 50px;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+#scrollToTop:hover {
+  text-decoration: none;
+  background-color: #f39200;
+}
+
+#scrollToTop:active, #scrollToTop:focus, #scrollToTop:visited {
+  text-decoration: none;
+}
+
+
+

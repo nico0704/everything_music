@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+    <title>FridgeLayout</title>
+    <link rel="stylesheet" type="text/css" href="css/fridgeStyle.css"/>
+  </head>
+  
+  <body>
+    <header>
+    <div class= "header" id="top">
+      <div class = "grid-container">
+        <div id = "header">
+          <div class = "navigation">
+            <nav class = "navbar fade">
+              <div>
+                <ul class = "nav">
+                  <li><a href="fridge.html" title="AllProducts">All Products</a></li>
+                  <li><a href="/createProduct" title="addNewProduct">Add a new product</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+
+    <main>
+      <div class = "editProductForm">
+          <div class = "headline margin-bottom">
+            <h1>Edit Product</h1>
+          </div>
+          <form id = "editProduct">
+            <ol>
+              <li class = "productNameClass">
+                <label for = "productName">Product name: </label>
+                <input id = "productName" type = "text" name = "productName">
+              </li>
+              <li class = "quantityClass">
+                <label for = "quantity">Quantity: </label>
+                <input id = "quantity" type = "number" name = "quantity">
+              </li>
+              <li class = "mhd">
+                <label for = "mhd">MHD: </label>
+                <input id = "mhd" type = "date" name = "date">
+              </li>
+              <li class = "ingredients">
+                <label for = "ingredients">Ingredients: </label>
+                <input id = "ingredients" type = "text" name = "ingredients">
+              </li>
+            </ol>
+            <input type = "submit" name = "submit">
+          </form>
+        </div>
+    </main>

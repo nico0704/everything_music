@@ -1,0 +1,846 @@
+/*CSS - Everything Music*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Rufina:wght@400;700&family=Sintony:wght@400;700&family=Bebas+Neue&display=swap');
+/*  font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Rufina', serif;
+    font-family: 'Sintony', sans-serif;
+    font-family: 'Bebas Neue', cursive; */
+
+html {
+    
+    scroll-behavior: smooth;
+ }
+
+body{
+    width: 100%;
+    color: #f1f1f1;
+    background-color: #202020;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+}
+
+main{
+    margin-top: 40px;
+}
+
+.grid-container{
+    display: grid;
+    margin: 0 10%;
+}
+
+img{
+    max-width: 100%;
+}
+
+.imageHover{
+    opacity: 1;
+    transition: 0.4s ease;
+    backface-visibility: hidden;
+}
+
+.slideshow-container:hover .imageHover {
+    opacity: 0.6;
+}
+
+.imageTeaser:hover .imageHover {
+    opacity: 0.6;
+}
+
+
+
+/*Typografie*/
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3
+ {
+	font-family: 'Bebas Neue', cursive;
+    margin-bottom: 5px;
+    font-weight: 700;
+    letter-spacing: 3pt;
+}
+
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+	margin-top: 0px;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	margin-top: 0px;
+    margin-bottom:0px;
+	font-weight: normal;
+    font-style: normal;
+}
+
+h1,
+.h1 {
+	font-size: 72px;
+    line-height: 82px;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 2px solid #3F3F3F;
+    border-bottom: 2px solid #3F3F3F;
+}
+
+h2,
+.h2 {
+    font-size: 46px;
+    line-height: 58px;
+    padding-top: 10px;
+    border-top: 2px solid  #3F3F3F;
+    border-bottom: 2px solid  #3F3F3F;
+    margin-bottom: 15px;
+    text-align: center;
+    
+}
+h3,
+.h3 {
+    font-size: 30px;
+    line-height: 40px;
+    text-transform: uppercase;
+}
+h4,
+.h4 {
+	font-size: 18px;
+	line-height: 28px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/*Content Start*/
+.grid-container #header{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "logo nav nav nav";
+    gap: 50px 30px;
+}
+#header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.logo {
+    grid-area: logo;
+}
+#logo{
+    width:200px;
+}
+
+.navigation{
+    grid-area: nav;
+}
+.start {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "headline headline headline"
+      "content content content"
+      "slideshow-container slideshow-container slideshow-container"
+      "teaser1 teaser2 teaser3"
+      "diveIn1 diveIn2 diveIn3"
+      "teaser4 teaser5 teaser6"
+      "diveIn4 . diveIn6";
+    gap: 15px 30px;
+}
+
+.headline{ 
+    grid-area: headline;
+}
+
+
+g:hover path{
+    fill: #707070 !important;
+}
+
+.diveIn1{
+    grid-area: diveIn1;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.diveIn2{
+    grid-area: diveIn2;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.diveIn3{
+    grid-area: diveIn3;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.diveIn4{
+    grid-area: diveIn4;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.diveIn6{
+    grid-area: diveIn6;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.teaser1{ 
+    grid-area: teaser1;
+    width: 100%;
+}
+
+.teaser2{ 
+    grid-area: teaser2;
+    width:100%;
+}
+
+.teaser3{ 
+    grid-area: teaser3;
+    width:100%;
+}
+
+.teaser4{ 
+    grid-area: teaser4;
+    width: 100%;
+}
+
+.teaser5{ 
+    grid-area: teaser5;
+    width:100%; 
+}
+
+.teaser6{ 
+    grid-area: teaser6;
+    width:100%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin-bottom: 70px;
+    
+  }
+
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(250, 250, 250, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #707070;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #707070;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #707070;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+.dot:hover {
+    background-color: #707070;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+footer .grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "copyright metanav";
+    gap: 50px 30px;
+}
+
+.copyright{
+    grid-area: copyright;
+}
+
+.metanavigation{
+    grid-area: metanav;
+}
+
+
+/*Button-Animation*/
+.btn {
+    font-size: 25px !important;
+    background-color:transparent;
+    border: #f39200 solid 2px;
+    margin-top:10px;
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', cursive;
+    color: #f39200;
+}
+
+.btn a {
+    color:#f39200 !important;
+    text-decoration: none !important;
+}
+
+.btn:hover {
+    text-decoration: none !important;
+  
+}
+
+.scale-up-center {
+   -ms-interpolation-mode: bicubic;
+	-moz-transition: all 1.0s;
+	-webkit-transition: all 1.0s;
+	transition: all 400ms; 
+}
+.scale-up-center:hover {
+    -moz-transform: scale(1.07);
+	-webkit-transform: scale(1.07);
+	transform: scale(1.07);
+} 
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    color: inherit;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.btn.active, .btn:active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,.125);
+    box-shadow: inset 0 0px 0px rgba(0,0,0,.125);
+}
+
+/*Navigation*/
+.navbar {
+	margin-top:70px;
+	margin-bottom:0px;
+	border-radius: 0px;
+	font-size: 30px;
+    line-height: 30px;
+    font-family: 'Bebas Neue', cursive; 
+}
+
+.navbar .nav > li > a{
+	padding-left:0px;
+	padding-right: 0px;
+	margin-left:25px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+ul.nav li{
+    float: left;
+    list-style: none;
+}
+
+.navbar ul.nav{
+    float:right;
+    margin-top: 0px;
+}
+
+.navbar .nav > .active > a, .navbar > .active > a:focus > .active > a:hover {
+    color: #f39200;
+	
+    background-color: transparent;
+}
+
+.navbar .nav > li > a:hover {
+    color: #f39200;
+	border-bottom:solid 2px #707070;
+}
+
+/*Metanavigation*/
+.metanav{
+	float: right;
+}
+
+.metanav ul.nav{
+    margin:0
+}
+
+.metanav li {
+	float:left;
+	background-color: transparent;
+}
+
+.metanav .nav > li > a {
+	background-color:transparent !important;
+    margin-left: 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.metanav .nav > li > a.active {
+    color: #f39200;
+    text-decoration: underline;
+}
+
+.metanav li a:hover {
+    color: #f39200; 
+	background-color: transparent;
+    text-decoration: underline;
+
+}
+
+.metanav li a:visited {
+	background-color: transparent;
+	text-decoration: none;
+
+}
+
+/*scrollToTop-Button*/
+
+#scrollToTop {
+    cursor: pointer;
+    font-size: 30px;
+	line-height: 22px;
+    position: fixed;
+    text-align: center;
+    z-index: 9999;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+    background: #343434;
+    color: #f1f1f1;
+    border-radius: 100%;
+    border: 2px solid #f1f1f1;
+    padding: 15px;
+    padding-bottom: 7px;
+    right: 50px;
+    bottom: 50px;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+#scrollToTop:hover {
+	text-decoration: none;
+	background-color: #f39200;
+}
+
+#scrollToTop:active, #scrollToTop:focus, #scrollToTop:visited {
+	text-decoration: none;
+}
+
+/*Footer*/
+.footer{
+    margin-top: 30px;
+    border-top: 2px solid #f39200;
+    padding-top:10px;
+}
+
+.copyright, .metanav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.impressum{
+    grid-area: content;
+}
+
+.impressum p {
+    max-width: 75%;
+}
+
+.datenschutz p {
+    max-width: 75%;
+}
+
+.datenschutz{
+    grid-area: content;
+}
+
+/*Unterseiten*/
+.hiphop, .pop, .currentYear, .alternative, .influencers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "headline headline headline"
+      "pic h2 pic2"
+      "pic3 pic4 pic5"
+      "comment comment .";
+    gap: 15px 30px;
+}
+
+
+.damn, .toPimpAButterfly, .kidA, .inRainbows, .theNewAbnormal, .manOnTheMoon, .elephant, .astroworld, .blackpumas, .isthisit{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "headline headline"
+      "pic6 pic7"
+      "albumText albumText"
+      "comment comment";
+    gap: 15px 30px;
+}
+
+.margin-bottom{
+    margin-bottom: 35px;;
+}
+
+.headline2{
+    grid-area: h2;
+    height:100%;
+    text-align: center;
+}
+.pic{
+    grid-area: pic;
+}
+
+.pic2{
+    grid-area: pic2;
+}
+
+.pic3{
+    grid-area: pic3;
+}
+
+.pic4{
+    grid-area: pic4;
+}
+
+.pic5{
+    grid-area: pic5;
+}
+
+.pic6{
+    grid-area: pic6;
+}
+
+.pic7{
+    grid-area: pic7;
+}
+
+.albumText{
+    grid-area: albumText;
+    border: 2px solid #f39200;
+    padding: 10px;
+    width: 97%;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color:#f1f1f1;
+    text-align: center;
+    
+}
+
+.text{
+    grid-area: text;
+}
+.comment{
+    grid-area: comment;
+}
+
+textarea {
+    border: 2px solid #f39200;
+    padding: 10px;
+    width:97%;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    color:#3d3c3c;
+}
+
+a{
+    color:#f39200;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+
+@media (max-width: 1010px){
+    .grid-container #header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          ". logo logo ."
+          "nav nav nav nav";
+        gap: 15px 30px;
+    }
+
+    .start {
+        display: grid;
+        grid-template-columns: 33.3333333% 33.3333333% 33.3333333%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline headline"
+          "content content content"
+          "slideshow-container slideshow-container slideshow-container"
+          "slideshow-container slideshow-container slideshow-container"
+          "teaser1 teaser2 teaser3"
+          "diveIn1 diveIn2 diveIn3"
+          "teaser4 teaser5 teaser6"
+          "diveIn4 . diveIn6";
+        gap: 15px 30px;
+    }
+
+    .navbar ul.nav {
+        float: none;
+        margin-top: 0px;
+        margin-left:-5%;
+    }
+
+    .navbar {
+        margin-top: 30px;
+        margin-bottom: 0px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #scrollToTop {
+        right: 20px;
+    }
+
+    .h2 {
+        hyphens: auto;
+    }
+
+}
+
+@media (max-width: 700px){
+    .grid-container #header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "logo logo logo"
+          "nav nav nav";
+        gap: 15px 30px;
+    }
+
+    .logo {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    ul.nav li {
+        margin-bottom: 20px;
+    }
+
+    .start {
+        display: grid;
+        grid-template-columns: 33.3333333% 33.3333333% 33.3333333%;;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline headline"
+          "content content content"
+          "slideshow-container slideshow-container slideshow-container"
+          "teaser1 teaser2 teaser3"
+          "diveIn1 diveIn2 diveIn3"
+          "teaser4 . teaser6"
+          "diveIn4 . diveIn6";
+        gap: 15px 30px;
+    }
+
+    .hiphop, .pop, .currentYear, .alternative, .influencers{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline"
+          "h2 h2"
+          "pic pic2"
+          "pic3 pic4"
+          "pic5 ."
+          "text text"
+          "comment comment";
+        gap: 15px 30px;
+    }
+
+    .damn, .toPimpAButterfly, .kidA, .inRainbows, .theNewAbnormal, .manOnTheMoon, .elephant, .astroworld, .blackpumas, .isthisit{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline"
+          "pic6 pic7"
+          "albumText albumText"
+          "comment comment";
+        gap: 15px 30px;
+    }
+
+    footer .grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "copyright"
+          "metanav";
+        gap: 15px 30px;
+    }
+
+    
+    .h2 {
+        hyphens: auto;
+    }
+
+    .teaser5{
+        display: none;
+    }
+}
+
+@media (max-width: 580px){
+    #scrollToTop {
+    padding: 15px;
+    padding-bottom: 7px;
+    right: 10px;
+    bottom: 50px;
+    
+    }
+
+    .grid-container #header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "logo logo"
+          "nav nav";
+        gap: 50px 30px;
+    }
+
+    .start {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline"
+          "content"
+          "slideshow-container"
+          "slideshow-container"
+          "slideshow-container"
+          "teaser1"
+          "diveIn1"
+          "teaser2"
+          "diveIn2"
+          "teaser3"
+          "diveIn3"
+          "teaser4"
+          "diveIn4"
+          "teaser5"
+          "diveIn5"
+          "teaser6"
+          "diveIn6";
+        gap: 10px 15px;
+    }
+
+    .hiphop, .pop, .currentYear, .alternative, .influencers{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline"
+          "h2"
+          "pic"
+          "pic2"
+          "pic3"
+          "pic4"
+          "pic5"
+          "text"
+          "comment";
+        gap: 50px 30px;
+    }
+
+    .damn, .toPimpAButterfly, .kidA, .inRainbows, .theNewAbnormal, .manOnTheMoon, .elephant, .astroworld, .blackpumas, .isthisit{
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline"
+          "pic6"
+          "pic7"
+          "albumText"
+          "comment";
+        gap: 50px 30px;
+    }
+
+ h2,
+.h2 {
+    hyphens: auto;
+    }
+}   

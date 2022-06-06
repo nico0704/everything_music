@@ -1,0 +1,152 @@
+@media print{
+
+    body{
+        color:  #202020;
+        background-color: #ffffff;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 220;
+        font-size: 12px;
+        line-height: 15px;
+        margin: 0;
+    }
+
+    h1,
+    .h1 {
+	font-size: 42px;
+    line-height: 32px;
+    text-align: center;
+    padding-top: 5px;
+    border-top: 2px solid #3F3F3F;
+    border-bottom: 2px solid #3F3F3F;
+    
+}
+
+    h2,
+    .h2 {
+    font-size: 30px;
+    line-height: 32px;
+    padding-top: 5px;
+    border-top: 1px solid  #3F3F3F;
+    border-bottom: 1px solid  #3F3F3F;
+    margin-bottom: 5px;
+    text-align: center;
+    
+}
+
+.navbar {
+	margin-top:50px;
+	margin-bottom:0px;
+	border-radius: 0px;
+	font-size: 20px;
+    line-height: 20px;
+    font-family: 'Bebas Neue', cursive; 
+}
+
+    .metanavigation{
+        display:none;
+    }
+
+    .canvas {
+        display: none;
+    }
+
+    #scrollToTop{
+        display:none;
+    }
+
+    button{
+        display: none;
+    }
+
+    .comment{
+        display:none;
+    }
+
+    .navbar .nav > li > a {
+        margin-left: 10px;
+        color: #343434;
+    }
+
+    .grid-container{
+        margin: 0 8%;
+    }
+
+    .slideshow-container{
+        display: none;
+    }
+
+    .footer{
+        margin-top: none;
+        border-top: none;
+        padding-top:none;
+        display: none;
+    }
+
+    .copyright{
+        display: none;
+    }
+
+    .grid-container #header{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "logo nav nav";
+        gap: 5px 10px;
+    }
+
+
+    .start {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline headline"
+          "teaser1 teaser2 teaser3"
+          "teaser4 teaser5 teaser6";
+        gap: 10px 15px;
+    }
+
+    #logo{
+        width:150px;
+    }
+
+    .teaser5{
+        display: none;
+    }
+
+    .copyright{
+        display: none;
+    }
+
+
+    /*Unterseiten*/
+
+    .hiphop, .pop, .currentYear, .alternative, .influencers{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline headline"
+          "pic h2 pic2"
+          "pic3 pic4 pic5";
+        gap: 5px 20px;
+
+    }
+    
+    .damn, .toPimpAButterfly, .kidA, .inRainbows, .theNewAbnormal, .manOnTheMoon, .elephant, .astroworld, .blackpumas, .isthisit{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "headline headline"
+          "pic6 pic7"
+          "albumText albumText";
+        gap: 5px 20px;
+    }
+
+    .albumText{
+        color:#202020;
+        background-color: #ffffff;
+    }
+}

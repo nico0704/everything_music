@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+    <title>FridgeLayout</title>
+    <link rel="stylesheet" type="text/css" href="css/fridgeStyle.css"/>
+  </head>
+  
+  <body>
+    <header>
+    <div class= "header" id="top">
+      <div class = "grid-container">
+        <div id = "header">
+          <div class = "navigation">
+            <nav class = "navbar fade">
+              <div>
+                <ul class = "nav">
+                  <li><a href="fridge.html" title="AllProducts">All Products</a></li>
+                  <li class="active"><a href="/createProduct" title="addNewProduct">Add a new product</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    </header>
+
+    <main>
+      <div class = "createProductForm">
+          <div class = "headline margin-bottom">
+            <h1>Add Product</h1>
+          </div>
+          <form id = "createNewProduct">
+            <ol>
+              <li class = "barcodeClass">
+                <label for = "barcode">Barcode: </label>
+                <input id = "barcode" type = "number" name = "barcode">
+              </li>
+              <li class = "quantityClass">
+                <label for = "quantity">Quantity: </label>
+                <input id = "quantity" type = "number" name = "quantity">
+              </li>
+              <li class = "mhd">
+                <label for = "mhd">MHD: </label>
+                <input id = "mhd" type = "date" name = "date">
+              </li>
+            </ol>
+            <input type = "submit" name = "submit">
+          </form>
+        </div>
+    </main>
